@@ -1,0 +1,14 @@
+[
+	{
+		"mysql_host":"localhost",
+		"mysql_user":"root",
+		"mysql_pwd":"mysql20180223%",
+		"dbName":"bzj1",
+		"s1_ip":"192.168.1.68",
+		"s1_port":8080,
+		"s2_ip":"192.168.1.69",
+		"msg_level":"INFO",
+		"selComPort":"COM1",
+		"selBaudRate":9600
+	}
+]

@@ -1,0 +1,12 @@
+mysql_host=localhost
+mysql_user=root
+dbName=bzj1
+msg_level=INFO
+selComPort=COM2
+selBaudRate=9600
+
+
+
+
+
+

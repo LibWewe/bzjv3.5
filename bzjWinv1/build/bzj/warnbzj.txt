@@ -1,0 +1,27 @@
+missing module named resource - imported by posix, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named posix - imported by os, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named _posixsubprocess - imported by subprocess, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named org - imported by pickle, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named readline - imported by cmd, code, pdb, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named _winreg - imported by platform, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named _scproxy - imported by urllib.request
+missing module named java - imported by platform, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named 'java.lang' - imported by platform, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named termios - imported by tty, getpass, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named urllib.unquote - imported by urllib, asn1crypto._iri
+missing module named urllib.quote - imported by urllib, asn1crypto._iri
+missing module named grp - imported by shutil, tarfile, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, getpass, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py, netrc
+missing module named 'org.python' - imported by copy, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py, xml.sax
+missing module named _dummy_threading - imported by dummy_threading, F:\study\python\virtualenv\code\bzj\bzjWinv1\bzj.py
+missing module named ConfigParser - imported by pymysql.optionfile
+missing module named cStringIO - imported by asn1crypto.core
+missing module named copy_reg - imported by cStringIO
+missing module named UserDict - imported by asn1crypto._ordereddict
+missing module named urlparse - imported by asn1crypto._iri
+runtime module named six.moves - imported by cryptography.x509.general_name
+missing module named StringIO - imported by six
+missing module named __builtin__ - imported by pymysql._compat

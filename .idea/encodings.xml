@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/dist/bzj/log/sys.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/dist/bzj/log/win.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/log/sys.log" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/log/sys.log.1" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/log/win.log" charset="GBK" />
+  </component>
+</project>
