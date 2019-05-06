@@ -131,7 +131,6 @@ class set_status_msg_thread(QThread):
 
 
 class get_err_msg_from_sys_thread(QThread):
-
     signal = QtCore.pyqtSignal(dict)
 
     def __init__(self, win, q_err):
@@ -375,7 +374,7 @@ class mainView(QtWidgets.QMainWindow, mainWin.Ui_MainWindow):
         self.getMachineSetDate()
         if self.isAdmin == True:
             self.changePwdBtn.setText("系统设置")
-            QMessageBox.information(self, "提示", "管理员账户验证成功！         ", QMessageBox.Ok,
+            QMessageBox.information(self.centralwidget, "提示", "管理员账户验证成功！         ", QMessageBox.Ok,
                                     QMessageBox.Ok)
             self.log_msg(flag=self.INFO, msg_str="管理员账户验证成功")
         self.T3.isStart = True
@@ -408,7 +407,7 @@ class mainView(QtWidgets.QMainWindow, mainWin.Ui_MainWindow):
         self.account = self.loginView.account.text()
         self.password = self.loginView.password.text()
         if self.account == "" or self.password == "":
-            QMessageBox.warning(self, "提示", "用户名或密码不能为空！         ", QMessageBox.Ok,
+            QMessageBox.warning(self.centralwidget, "提示", "用户名或密码不能为空！         ", QMessageBox.Ok,
                                 QMessageBox.Ok)
             return
         sqlstr = "SELECT * FROM login WHERE uname = '%s'" % self.account
@@ -420,7 +419,7 @@ class mainView(QtWidgets.QMainWindow, mainWin.Ui_MainWindow):
             return
         result = self.cursor.fetchall()
         if len(result) == 0:
-            QMessageBox.warning(self, "提示", "该用户名不存在！         ", QMessageBox.Ok,
+            QMessageBox.warning(self.centralwidget, "提示", "该用户名不存在！         ", QMessageBox.Ok,
                                 QMessageBox.Ok)
             return
         s1 = sha1(self.password.encode("utf-8"))
@@ -435,7 +434,7 @@ class mainView(QtWidgets.QMainWindow, mainWin.Ui_MainWindow):
                 self.mainWinShow()
                 self.log_msg(flag=self.INFO, msg_str="%s账号登陆成功" % self.account)
         else:
-            QMessageBox.warning(self, "提示", "密码错误！         ", QMessageBox.Ok,
+            QMessageBox.warning(self.centralwidget, "提示", "密码错误！         ", QMessageBox.Ok,
                                 QMessageBox.Ok)
 
     def onClickedPrevPageBtn(self):
@@ -598,14 +597,14 @@ class mainView(QtWidgets.QMainWindow, mainWin.Ui_MainWindow):
         newPwd1 = self.changePwdView.newPwd1.text()
         newPwd2 = self.changePwdView.newPwd2.text()
         if newPwd1 != newPwd2:
-            if QMessageBox.warning(self, "提示", "两次输入的新密码不一致！         ", QMessageBox.Ok,
+            if QMessageBox.warning(self.centralwidget, "提示", "两次输入的新密码不一致！         ", QMessageBox.Ok,
                                    QMessageBox.Ok) == QMessageBox.Ok:
                 self.changePwdView.oldPwd.setText("")
                 self.changePwdView.newPwd1.setText("")
                 self.changePwdView.newPwd2.setText("")
             return
         if len(newPwd1) < 6:
-            if QMessageBox.warning(self, "提示", "密码不能少于6个字符！         ", QMessageBox.Ok,
+            if QMessageBox.warning(self.centralwidget, "提示", "密码不能少于6个字符！         ", QMessageBox.Ok,
                                    QMessageBox.Ok) == QMessageBox.Ok:
                 self.changePwdView.oldPwd.setText("")
                 self.changePwdView.newPwd1.setText("")
@@ -613,7 +612,7 @@ class mainView(QtWidgets.QMainWindow, mainWin.Ui_MainWindow):
             return
 
         if oldPwd != self.password:
-            if QMessageBox.warning(self, "提示", "原始密码输入错误！         ", QMessageBox.Ok,
+            if QMessageBox.warning(self.centralwidget, "提示", "原始密码输入错误！         ", QMessageBox.Ok,
                                    QMessageBox.Ok) == QMessageBox.Ok:
                 self.changePwdView.oldPwd.setText("")
                 self.changePwdView.newPwd1.setText("")
@@ -646,7 +645,7 @@ class mainView(QtWidgets.QMainWindow, mainWin.Ui_MainWindow):
             self.db.rollback()
             return
         self.password = newPwd1
-        if QMessageBox.warning(self, "提示", "密码修改成功！         ", QMessageBox.Ok,
+        if QMessageBox.warning(self.centralwidget, "提示", "密码修改成功！         ", QMessageBox.Ok,
                                QMessageBox.Ok) == QMessageBox.Ok:
             self.log_msg(flag=self.INFO, msg_str="密码修改成功")
             self.changePwdView.close()
@@ -969,7 +968,7 @@ class mainView(QtWidgets.QMainWindow, mainWin.Ui_MainWindow):
         :param kwargs:
         :return:
         """
-        if QMessageBox.warning(self, "提示", "确定要退出程序吗？         ", QMessageBox.Yes | QMessageBox.No,
+        if QMessageBox.warning(self.centralwidget, "提示", "确定要退出程序吗？         ", QMessageBox.Yes | QMessageBox.No,
                                QMessageBox.No) == QMessageBox.Yes:
             sqlStr = "DELETE FROM lineuser WHERE denglushijian = '%s'" % self.loadTimeStr
             try:
